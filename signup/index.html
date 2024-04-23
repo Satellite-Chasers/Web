@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <svg lass="satlogo" xmlns="http://www.w3.org/2000/svg" width="100" height="100" version="1.1">
+                <rect x="40" y="30" width="20" height="40" fill="grey" />
+                <rect x="20" y="35" width="15" height="10" fill="blue" />
+                <rect x="65" y="35" width="15" height="10" fill="blue" />
+                <line x1="50" y1="30" x2="50" y2="20" stroke="black" stroke_width="2" />
+            </svg>
+            <img
+                src="data:image/svg+xml;base64,Cjw/eG1sIHZlcnNpb249IjEuMCIgPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2ZXJzaW9uPSIxLjEiPgogICAgPHJlY3QgeD0iNDAiIHk9IjMwIiB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIGZpbGw9ImdyZXkiLz4KICAgIDxyZWN0IHg9IjIwIiB5PSIzNSIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEwIiBmaWxsPSJibHVlIi8+CiAgICA8cmVjdCB4PSI2NSIgeT0iMzUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMCIgZmlsbD0iYmx1ZSIvPgogICAgPGxpbmUgeDE9IjUwIiB5MT0iMzAiIHgyPSI1MCIgeTI9IjIwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Vfd2lkdGg9IjIiLz4KPC9zdmc+Cg==" />
+
+            <a href="/">Satellite Chasers</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/satellites">Satellites</a></li>
+                <li><a href="/aboutus">About us</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <div class="user-icon">
+                    <!-- User icon would be placed here -->
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <h1 class="header">Sign up for free text notifications!</h1>
+            <div class="card">
+                <h3>Provide your Phone number</h3>
+                <div class="signup">
+                    <input class="input" type="text" id="phoneInput" placeholder="(123) 456-7890">
+                </div>
+                <h3>Provide your Zip Code</h3>
+                <div class="signup">
+                    <input class="input" id="zipCode" type="number" placeholder="Zip Code" />
+                    <div id="errormsg"></div>
+                    <button id="sendData">Send</button>
+                    <!-- <form action="localhost:3000/submit-form" method="POST">
+                        <div class="g-recaptcha" data-sitekey="6LeeGbspAAAAADwh1I_aPsIT9wRxp4qFXb8dpLba"></div>
+                        <br />
+                        <input id="captchaSubmit" type="submit" value="Submit">
+                    </form> -->
+                </div>
+            </div>
+            <script src="script.js"></script>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    </main>
+</body>
+
+</html>
