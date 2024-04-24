@@ -2,6 +2,7 @@ const sendData = document.getElementById("sendData")
 const captchaSubmit = document.getElementById("captchaSubmit")
 
 
+
 // SEND BUTTON LISTENER
 document.addEventListener('DOMContentLoaded', function () {
     sendData.addEventListener('click', async function () {
