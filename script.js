@@ -6,7 +6,7 @@ let API_URL
 if (window.location.hostname.includes('127') ) {
     API_URL = 'http://localhost:3000';
 } else {
-    API_URL = 'https://api.satchaser.org';
+    API_URL = 'https://satchaserapi.fly.dev';
 }
 
 // SEND BUTTON LISTENER
