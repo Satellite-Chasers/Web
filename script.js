@@ -1,7 +1,13 @@
 const sendData = document.getElementById("sendData")
 const captchaSubmit = document.getElementById("captchaSubmit")
 
+let API_URL
 
+if (window.location.hostname.includes('127') ) {
+    API_URL = 'http://localhost:3000';
+} else {
+    API_URL = 'https://api.satchaser.org';
+}
 
 // SEND BUTTON LISTENER
 document.addEventListener('DOMContentLoaded', function () {
@@ -18,9 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
         button.disabled = true
         button.innerHTML = "LOADING"
 
+        console.log("This is the API_HOST",API_URL)
+        console.log("This is the window url",window.location.hostname)
 
 
-        const response = await fetch('http://localhost:3000/sendPhoneAndZip', {
+        const response = await fetch(`${API_URL}/sendPhoneAndZip`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -43,6 +51,20 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    var consentCheckbox = document.getElementById('privacyPolicyConsent');
+    var sendDataButton = document.getElementById('sendData');
+
+    consentCheckbox.addEventListener('change', function() {
+        // Check if the checkbox is checked
+        if (consentCheckbox.checked) {
+            sendDataButton.disabled = false; // Enable the button
+        } else {
+            sendDataButton.disabled = true; // Keep or make the button disabled
+        }
+    });
+});
+
 // FORMAT PHONE NUMBER LISTENER
 document.getElementById('phoneInput').addEventListener('input', function (e) {
     var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
@@ -54,6 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
     captchaSubmit.addEventListener('click', async function (e) {
         e.preventDefault()
         return
+
+
+
+
+
+
         console.log("Sent Captcha")
 
         const form = document.querySelector('form')
@@ -66,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         try {
-            const response = await fetch('http://localhost:3000/submit-form', {
+            const response = await fetch(`${API_HOST}/submit-form`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
