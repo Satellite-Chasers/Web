@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Satellite Chasers</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
-<header>
-  <div class="logo">
-    <img src="/images/Satellite Icon.png" alt="Header logo" id="headerLogo" />
-    <a href="/">Satellite Chasers</a>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/satellites">Satellites</a></li>
-      <li><a href=/aboutus">About us</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/signup">Sign Up</a></li>
-      <div class="user-icon">
-        <!-- User icon would be placed here -->
-      </div>
-    </ul>
-  </nav>
-</header>
-<main>
-  <h1>Welcome fellow boomer!</h1>
-  <button>Want free alerts? Sign up here</button>
-  <button>Already have an account? Login here</button>
-</main>
+    <main>
+        <h1 class="header">Sign up for free text notifications!</h1>
+        <div class="card">
+            <h3>Provide your Phone number</h3>
+            <div class="signup">
+                <input class="input" type="text" id="phoneInput" placeholder="(123) 456-7890">
+            </div>
+            <h3>Provide your Zip Code</h3>
+            <div class="signup">
+                <input class="input" id="zipCode" type="number" placeholder="Zip Code" />
+                <div id="errormsg"></div>
+                <div>By submitting this form and signing up for texts, you consent to receive text messages (e.g.
+                    overhead satellites). Msg & data rates may apply. Msg
+                    frequency varies. Unsubscribe at any time by replying
+                    > STOP.
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="privacyPolicyConsent" name="privacyPolicyConsent">
+                        <label for="privacyPolicyConsent">I agree to the <a href="/privacypolicy" class="linkToPolicy">Privacy Policy</a>.</label>
+                    </div>                <!-- <form action="localhost:3000/submit-form" method="POST">
+                        <div class="g-recaptcha" data-sitekey="6LeeGbspAAAAADwh1I_aPsIT9wRxp4qFXb8dpLba"></div>
+                        <br />
+                        <input id="captchaSubmit" type="submit" value="Submit">
+                    </form> -->
+                    <button id="sendData" disabled>Send</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    </main>
 </body>
+
 </html>

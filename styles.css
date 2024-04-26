@@ -5,22 +5,34 @@ body {
   padding: 20px;
 }
 
-header {
+h1 {
+  align-items: center;
+}
+.header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
 }
 
-#headerLogo {
-  width: 10%;
-  height: auto;
+.satlogo {
+  width: 100px;
+  height: 100px;
+  background-image: url('data:image/svg+xml;base64,Cjw/eG1sIHZlcnNpb249IjEuMCIgPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2ZXJzaW9uPSIxLjEiPgogICAgPHJlY3QgeD0iNDAiIHk9IjMwIiB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIGZpbGw9ImdyZXkiLz4KICAgIDxyZWN0IHg9IjIwIiB5PSIzNSIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEwIiBmaWxsPSJibHVlIi8+CiAgICA8cmVjdCB4PSI2NSIgeT0iMzUiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMCIgZmlsbD0iYmx1ZSIvPgogICAgPGxpbmUgeDE9IjUwIiB5MT0iMzAiIHgyPSI1MCIgeTI9IjIwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Vfd2lkdGg9IjIiLz4KPC9zdmc+Cg==');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 .logo a {
   text-decoration: none;
   color: #000000;
   font-size: 1.2em;
+}
+
+nav:hover {
+  color: black
 }
 
 nav ul {
@@ -37,7 +49,7 @@ nav ul li {
 
 nav a {
   text-decoration: none;
-  color: #000000;
+  color: gray;
 }
 
 .user-icon {
@@ -46,23 +58,21 @@ nav a {
   height: 24px;
   border-radius: 50%;
   background-color: #000000;
-  margin-left: auto; /* Pushes the icon to the right */
+  margin-left: auto;
+  /* Pushes the icon to the right */
 }
 
 /* main {
-  background-color: #ffffff;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  } */
 
-.header {
-  text-align: center;
-  display: flex;
-}
+
 
 .card {
   background-color: #ffffff;
@@ -83,14 +93,20 @@ button {
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
-  color: #ffffff;
-  background-color: #007bff;
+  color: #666;
+  background-color: #ccc;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
-button:hover {
+button:enabled {
+  background-color: #007BFF; /* Bright blue for enabled state */
+  color: white;
+  cursor: pointer; /* Pointer cursor when the button is enabled */
+}
+
+button:hover:enabled {
   background-color: #0056b3;
 }
 
@@ -108,4 +124,37 @@ button:hover {
   font-family: montserrat;
   color: #2C3E50;
   font-size: 13px;
+}
+
+#errormsg {
+  color: red;
+  
+}
+.checkbox-container {
+  margin: 20px 0;
+  display: inline-flex;
+  align-items: center; /* Ensures the label and checkbox are aligned properly */
+}
+
+input[type="checkbox"] {
+  accent-color: #007BFF; /* Modern way to set the checkbox color */
+  margin-right: 10px; /* Space between checkbox and label */
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007BFF; /* Blue when checked */
+}
+
+label {
+  font-size: 16px; /* Appropriate text size */
+  color: #333; /* Dark gray text color for readability */
+}
+
+.linkToPolicy {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.linkToPolicy:hover {
+  text-decoration: underline;
 }
