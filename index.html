@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Satellite Notifications | SatChaser.org</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <main>
         <h1 class="header">Sign up for free text notifications!</h1>
@@ -19,23 +20,17 @@
             <div class="signup">
                 <input class="input" id="zipCode" type="number" placeholder="Zip Code" />
                 <div id="errormsg"></div>
-                <div>By submitting this form and signing up for texts, you consent to receive text messages (e.g.
-                    overhead satellites). Msg & data rates may apply. Msg
-                    frequency varies. Unsubscribe at any time by replying
-                    > STOP.
+                <div>
                     <div class="checkbox-container">
                         <input type="checkbox" id="privacyPolicyConsent" name="privacyPolicyConsent">
-                        <label for="privacyPolicyConsent">I agree to the <a href="/privacypolicy" class="linkToPolicy">Privacy Policy</a>.</label>
-                    </div>                <!-- <form action="localhost:3000/submit-form" method="POST">
-                        <div class="g-recaptcha" data-sitekey="6LeeGbspAAAAADwh1I_aPsIT9wRxp4qFXb8dpLba"></div>
-                        <br />
-                        <input id="captchaSubmit" type="submit" value="Submit">
-                    </form> -->
+                        <label for="privacyPolicyConsent">I agree to the <a href="/privacy"
+                                class="linkToPolicy">Privacy Policy</a>.</label>
+                    </div> 
                     <button id="sendData" disabled>Send</button>
+                </div>
             </div>
-        </div>
-        <script src="script.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <script src="script.js"></script>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
     </main>
